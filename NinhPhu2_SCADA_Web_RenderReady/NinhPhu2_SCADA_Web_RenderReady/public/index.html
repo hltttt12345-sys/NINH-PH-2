@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phong Phú | Ninh Phú 2 SCADA</title><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><img src="/favicon.ico" alt="Phong Phú"><div><strong>PHONG PHÚ · NINH PHÚ 2</strong><span>HỆ THỐNG GIÁM SÁT 14 MÁY KÉO SỢI JWF1520</span></div></div><div class="top-actions"><div class="live-pill" id="sourceState"><span class="dot"></span>Đang kiểm tra…</div><form method="post" action="/logout"><button class="ghost" type="submit">Đăng xuất</button></form></div></header>
+<main class="page">
+<section class="hero"><div><h1 id="shiftName">Ca hiện tại</h1><p id="shiftWindow">—</p></div><div class="clock"><span>Thời gian</span><strong id="clock">—</strong></div></section>
+<section class="summary-grid">
+<article class="summary teal"><span>TỔNG SẢN LƯỢNG CA HIỆN TẠI</span><strong id="totalCurrent">—</strong><small>m</small></article>
+<article class="summary green"><span>MÁY ĐANG CHẠY</span><strong id="runningCount">0</strong><small>/ 14 máy</small></article>
+<article class="summary amber"><span>MÁY DỪNG / ĐỔ SỢI</span><strong id="stoppedCount">0</strong><small>máy</small></article>
+<article class="summary red"><span>MẤT KẾT NỐI</span><strong id="offlineCount">0</strong><small>máy</small></article>
+</section>
+<section class="section-head"><div><h2>Trạng thái thời gian thực</h2><p>Máy 09 → Máy 22 · cập nhật trực tiếp từ SCADA Ninh Phú 2</p></div><span id="lastSync">—</span></section>
+<section id="machines" class="machine-grid"></section>
+<section class="panel"><div class="section-head compact"><div><h2>Lịch sử sản lượng theo ca</h2><p>Dữ liệu ca đã chốt từ SQLite trên máy SCADA</p></div><div class="filters"><select id="daysFilter"><option value="7">7 ngày</option><option value="14" selected>14 ngày</option><option value="30">30 ngày</option><option value="90">90 ngày</option></select><select id="machineFilter"><option value="0">Tất cả máy</option></select></div></div><div class="table-wrap"><table><thead><tr><th>Ngày</th><th>Ca</th><th>Máy</th><th>Sản lượng</th><th>RUN</th><th>STOP</th><th>Kết thúc</th></tr></thead><tbody id="historyRows"></tbody></table></div></section>
+</main><script src="/dashboard.js" defer></script></body></html>

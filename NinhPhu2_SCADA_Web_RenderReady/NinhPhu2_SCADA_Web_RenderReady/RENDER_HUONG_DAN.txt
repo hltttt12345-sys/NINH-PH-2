@@ -1,0 +1,28 @@
+NINH PHU 2 - WEB SCADA RENDER
+
+1) Tao GitHub repo moi: ninhphu2-scada
+2) Upload CAC FILE BEN TRONG thu muc nay vao root repo. De package.json nam ngay root.
+3) Render -> New -> Web Service -> repo ninhphu2-scada
+4) Name: ninhphu2-scada
+   Language: Node
+   Branch: main
+   Root Directory: DE TRONG neu package.json nam root
+   Build Command: npm install
+   Start Command: npm start
+   Region: Singapore
+   Compute: Free de thu nghiem
+5) Environment Variables:
+   BIND = 0.0.0.0
+   COOKIE_SECURE = 1
+   SESSION_HOURS = 12
+   SCADA_SOURCE = NINH_PHU_2_JWF1520_14
+   ADMIN_USERNAME = admin
+   ADMIN_PASSWORD = tu dat, >= 10 ky tu
+   SESSION_SECRET = Generate
+   SCADA_API_KEY = Generate va LUU LAI de nhap vao SCADA C#
+6) Deploy. Dia chi du kien: https://ninhphu2-scada.onrender.com
+7) Trong SCADA C#: WEB TU XA -> URL:
+   https://ninhphu2-scada.onrender.com/api/ingest
+   va dan SCADA_API_KEY cua Render.
+
+Luu y: Render Free co filesystem tam thoi. SCADA C# van giu lich su goc trong SQLite va gui bu lich su 35 ngay len web.

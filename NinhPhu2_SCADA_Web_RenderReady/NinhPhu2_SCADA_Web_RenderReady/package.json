@@ -1,0 +1,8 @@
+{
+  "name": "ninhphu2-scada-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Phong Phu Ninh Phu 2 - JWF1520 remote SCADA dashboard",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" }
+}

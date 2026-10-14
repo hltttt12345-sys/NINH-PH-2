@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: ninhphu2-scada
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: BIND
+        value: 0.0.0.0
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: SESSION_HOURS
+        value: "12"
+      - key: SCADA_SOURCE
+        value: NINH_PHU_2_JWF1520_14
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: SCADA_API_KEY
+        generateValue: true
